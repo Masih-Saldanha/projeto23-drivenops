@@ -14,6 +14,6 @@ services:
     ports:
       - 5000:5000
     depends_on:
-      - db_students_test
+      - postgres_sorteador_db_test
     env_file:
       - .env.docker.test
