@@ -20,4 +20,4 @@ jobs:
           envkey_DATABASE_URL: ${{secrets.DATABASE_URL_TEST}}
           file_name: ".env.docker.test"
       - name: Run Tests
-        run: docker-compose -f docker-compose-tests.yml run node_sorteador_app npm run test
+        run: docker-compose -f docker-compose-tests.yml run node_sorteador_app npm run test:merge
