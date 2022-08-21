@@ -1,7 +1,7 @@
 services:
-  db_students_test:
+  postgres_sorteador_db_test:
     image: postgres
-    container_name: db_students_test
+    container_name: postgres_sorteador_db_test
     restart: always
     ports:
       - 5544:5432
