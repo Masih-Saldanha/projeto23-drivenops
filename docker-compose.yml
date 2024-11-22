@@ -17,6 +17,8 @@ services:
       - 5000:5000
     depends_on:
       - postgres_sorteador_db
+    volumes:
+      - ./back-end:/usr/src
     env_file:
       - ./back-end/.env.docker
 
@@ -25,12 +27,14 @@ services:
     build: ./front-end
     volumes:
       - build_react:/var/www/html
+    env_file:
+      - ./front-end/.env.docker
 
   nginx_sorteador_app:
     container_name: nginx_sorteador_app
     build: ./nginx
     ports:
-      - 80:80
+      - 8080:80
     volumes:
       - build_react:/var/www/html
     depends_on:

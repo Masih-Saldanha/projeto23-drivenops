@@ -22,7 +22,10 @@ function App() {
   }, []);
   
   return (
-    student ? <h1>{student.name}</h1> : "Carregando..."
+    <>
+      <h1>Link: {process.env.REACT_APP_BASE_URL}</h1>
+      {student ? <h1>Sorteado: {student.name}</h1> : "Carregando..."}
+    </>
   )
 }
 
